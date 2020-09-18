@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: blueviolet;
+}
+.logo{
+    width: 64px;
+    height: 64px;
+    border: 5px solid black;
+    border-radius: 50%;
+}
+body{background-color: black;}
+main{
+    display: flex;
+    padding: 10px;
+}
+#shop-list{
+    background-color: blueviolet;
+    border: 5px solid black;
+    border-radius: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 52%
+}
+.items{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    border: 5px solid black;
+    border-radius: 15px;
+    width: fit-content;
+    margin: 10px;
+    background-color: white;
+}
+.items img{
+    width: 180px;
+    height: 200px;
+}
+#shop-card{
+    margin-left: 1%;
+    width: 46%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+#cart{
+    border: 5px solid gray ;
+    width: 80%;
+}
+#cart-header{
+    display: flex;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 5px;
+}
+#cart-header img{
+     width:32px;
+     height: 32px;
+     border-radius: 10px;
+}
+.item{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.fa{
+    cursor: pointer;
+}
+.fa-times{
+    color: red;
+}
+.item img{
+    width: 90px;
+    height: 100px;
+}
+.item button{
+    width: 25px;
+    padding:2px 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 2px;
+}
+.add-btn{
+    background-color: green;
+}
+.sub-btn{
+    background-color: red;
+}
+.item span{
+    width: 50px;
+    text-align: center;
+}
+.price{
+    display: none;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: blueviolet;
+    padding: 10px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+footer i {
+    margin: 10px;
+}
