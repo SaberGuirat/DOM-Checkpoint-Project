@@ -1,4 +1,4 @@
-// declarin some functions before starting modifying DOM
+// declaring some functions before starting modifying DOM
 let prod = (a, b) => {
   let c;
   if (b <= 2) {
@@ -16,8 +16,8 @@ let prodSub = (a, b) => {
 };
 let totalSum = (arr) => {
   let sum = 0;
-  for (let i = 0; i < arr.length; i++) {
-    sum += arr[i];
+  for(let i of arr ){
+    sum+=i;
   }
   return sum;
 };
@@ -41,13 +41,17 @@ let total = document.getElementById("total");
 // Total first value
 total.innerHTML = 0;
 // empty array for storing prices data later
-let count = [];
+let count=[];
+for(x in item){
+  count[x]=0;
+}
+
 // remove parent node(with item class)
-for (let x in rmvButton) {
+/*for (let x in rmvButton) {
   rmvButton[x].addEventListener("click", (event) => {
     item[x].remove();
   });
-}
+}*/
 
 //change heart color
 for (let i in heartIcon) {
