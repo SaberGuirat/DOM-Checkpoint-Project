@@ -42,6 +42,13 @@ let total = document.getElementById("total");
 total.innerHTML = 0;
 // empty array for storing prices data later
 let count = [];
+// remove parent node(with item class)
+for (let x in rmvButton) {
+  rmvButton[x].addEventListener("click", (event) => {
+    item[x].remove();
+  });
+}
+
 //change heart color
 for (let i in heartIcon) {
   heartIcon[i].addEventListener("click", (event) => {
@@ -62,6 +69,12 @@ for (let y in addItem) {
     );
     // store prices in array and calculate Total
     count[y] = Number(price[y].innerHTML);
+    //// rmv button on click
+    rmvButton[y].addEventListener("click", (event) => {
+      item[y].remove();
+      count[y]=0;
+      total.innerHTML = totalSum(count) + "$";
+    });
     total.innerHTML = totalSum(count) + "$";
     hideDisplay(quantity[y], price[y]);
   });
@@ -76,14 +89,18 @@ for (let x in subItem) {
       );
       subItem[x].previousElementSibling.innerHTML--;
       count[x] = Number(price[x].innerHTML);
+      if (subItem[x].previousElementSibling.innerHTML == 0){
+        count[x]=0;
+      }
+      // rmv button on click 
+      rmvButton[x].addEventListener("click", (event) => {
+        item[x].remove();
+        count[x]=0;
+        total.innerHTML = totalSum(count) + "$";
+      });
       total.innerHTML = totalSum(count) + "$";
+    
       hideDisplay(quantity[x], price[x]);
     }
-  });
-}
-// remove parent node(with item class)
-for (let x in rmvButton) {
-  rmvButton[x].addEventListener("click", (event) => {
-    item[x].remove();
   });
 }
